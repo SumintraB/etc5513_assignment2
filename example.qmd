@@ -10,7 +10,7 @@ editor: visual
 
 1\. Create a new RStudio Project. In this folder, create a simple qmd file called that can be knitted into a HTML file. Show the result of the example.qmd knitted file.
 
--   create a new RStudio Project named "etc5513_assignment2"
+-   create a new RStudio Project in the directory named "etc5513_assignment2"
 
 -   create a new example.qmd file and change the format to html and pdf as a default.
 
@@ -20,7 +20,7 @@ editor: visual
 
 -   git add .
 
--   git commit -m "add project and qmd file"
+-   git commit -m "commit statement; add project and qmd file"
 
 -   git push origin main
 
