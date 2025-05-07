@@ -57,3 +57,7 @@ editor: visual
 -   git push origin main
 
 6\. Merge the changes in testbranch onto main Show the conflict and fixing the merge conflict. Push the changes to GitHub, showing the status and changes in GitHub.
+
+7\. Tag this commit v1.0 on main using an annotated tag.
+
+8\. Delete branch testbranch locally and on the remote.
