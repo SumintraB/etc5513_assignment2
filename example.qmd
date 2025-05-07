@@ -42,8 +42,18 @@ editor: visual
 
 -   git add .
 
--   git commit -m
+-   git commit -m "added new data folder"
 
 -   git push origin testbranch
 
-5\. Switch back to the main branch and modify example.qmd in a different way such that it will conflict with testbranch. Commit and push these changes.
+5\. Switch back to the main branch and modify example.qmd in a different way such that it will conflict with testbranch. Commit and push these changes.git switch main
+
+-   update change on example.qmd file
+
+-   git add .
+
+-   git commit -m "modified example.qmd on main"
+
+-   git push origin main
+
+6\. Merge the changes in testbranch onto main Show the conflict and fixing the merge conflict. Push the changes to GitHub, showing the status and changes in GitHub.
