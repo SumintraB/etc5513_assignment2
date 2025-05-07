@@ -64,7 +64,7 @@ editor: visual
 
 -   git merge testbranch
 
--   fix the conclict then
+-   fix the conflict by choose the preferred version and delete (\<\<\<\<\<\<\<, =======, \>\>\>\>\>\>\>)
 
 -   git add .
 
@@ -73,5 +73,9 @@ editor: visual
 -   git push origin main
 
 7\. Tag this commit v1.0 on main using an annotated tag.
+
+-   git tag -a v1.0
+
+-   git push origin v1.0
 
 8\. Delete branch testbranch locally and on the remote.
