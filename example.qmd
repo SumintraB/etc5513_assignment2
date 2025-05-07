@@ -58,6 +58,20 @@ editor: visual
 
 6\. Merge the changes in testbranch onto main Show the conflict and fixing the merge conflict. Push the changes to GitHub, showing the status and changes in GitHub.
 
+-   git branch to make sure you are on the main branch
+
+-   (if not) use git switch branch
+
+-   git merge testbranch
+
+-   fix the conclict then
+
+-   git add .
+
+-   git commit -m "conflict resolved"
+
+-   git push origin main
+
 7\. Tag this commit v1.0 on main using an annotated tag.
 
 8\. Delete branch testbranch locally and on the remote.
