@@ -76,6 +76,34 @@ editor: visual
 
 -   git tag -a v1.0
 
+-   add the tag massage "Version 1.0 - merged testbranch and resolved conflict"
+
 -   git push origin v1.0
 
 8\. Delete branch testbranch locally and on the remote.
+
+-   git switch main
+
+-   git branch -d testbranch
+
+-   git push origin —delete testbranch
+
+9\. Show the commit log in condensed form in the terminal.
+
+-   git log —oneline
+
+10\. On main, create a new section in example.qmd that includes an easy to make plot. Commit the changes, and demonstrate using the command line interface how to undo the commit *without* losing your local changes.
+
+#### Simple Plot
+
+```{r}
+plot(cars)
+```
+
+-   create a new simple plot
+
+-   git add .
+
+-   git commit -m "modified example.qmd for step 10"
+
+-   git reset --soft HEAD\~1
