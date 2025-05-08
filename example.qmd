@@ -3,6 +3,7 @@ title: "example"
 format: 
   html: default
   pdf: default
+author: "Sumintra Boonmat"
 editor: visual
 ---
 
@@ -10,100 +11,141 @@ editor: visual
 
 1\. Create a new RStudio Project. In this folder, create a simple qmd file called that can be knitted into a HTML file. Show the result of the example.qmd knitted file.
 
--   create a new RStudio Project named "etc5513_assignment2"
+-   **Start a new RStudio project** - create a new RStudio Project named "etc5513_assignment2"
 
--   create a new example.qmd file and change the format to html and pdf as a default.
+-   **Create and edit a .qmd file** - create a new file named "example.qmd". Update the YAML so the the document can be knitted into html and pdf by default.
+
+-   ![](images/knitted_file.png)
 
 2\. From the command line interface, initialise this folder as a git repository and push it to the GitHub classroom repository.
 
--   git clone follow by SSH URL
+-   **Clone the repository from GitHub** - open the terminal and use the SSH URL provided to clone the repository.\
+    git clone git\@github.com:your-username/etc5513_assignment2.git
 
--   git add .
+-   **Navigate into the cloned project folder**\
+    cd etc5513_assignment2
 
--   git commit -m "commit statement; add project and qmd file"
+-   **Move the RStudio project files to this folder**
 
--   git push origin main
+-   **Stage all the project files**\
+    git add .
+
+-   **Make a commit**\
+    git commit -m "add project and qmd file"
+
+-   **Push the commit to the remote main branch on Github**\
+    git push origin main
 
 3\. Create a new branch called testbranch. Modify the file example.qmd and add the changes to both the local and remote repositories.
 
--   git branch testbranch
+-   **Create and switch to a new branch called *testbranch***\
+    git branch testbranch - creates a new branch named testbranch\
+    git switch testbranch -switch to created branch
 
--   git switch testbranch
+-   **Modify the example.qmd**
 
--   git add example.qmd
+-   **Stage all the files**\
+    git add .
 
--   git commit -m "modified example.qmd"
+-   **Make a commit**\
+    git commit -m "modified example.qmd"
 
--   git push origin testbranch
+-   **Push the commit to the remote testbranch on Github**\
+    git push origin testbranch
 
 4\. Create a folder called data, and add the data from Assignment 1 to that folder. Amend the previous commit to include the data folder. Push this amended commit to the remote.
 
--   add the new folder named data and place the data from assignment1
+-   **Create a new folder named *data* and place the data from assignment1**
 
--   git add .
+-   **Stage all the new files**\
+    git add .
 
--   git commit -m "added new data folder"
+-   **Make a commit with message**\
+    git commit -m "added new data folder""
 
--   git push origin testbranch
+-   **Push the changes to the remote testbranch**\
+    git push origin testbranch
 
 5\. Switch back to the main branch and modify example.qmd in a different way such that it will conflict with testbranch. Commit and push these changes.git switch main
 
--   update change on example.qmd file
+-   **Switch back to main**\
+    git switch main
 
--   git add .
+<!-- -->
 
--   git commit -m "modified example.qmd on main"
+-   **Modify change on example.qmd file** - update the same part as on testbranch so it creates conflict with the testbranch.
 
--   git push origin main
+-   **Stage and commit the change\
+    **git add .\
+    git commit -m "modified example.qmd on main"
+
+-   **Push the changes to main**\
+    git push origin main
 
 6\. Merge the changes in testbranch onto main Show the conflict and fixing the merge conflict. Push the changes to GitHub, showing the status and changes in GitHub.
 
--   git branch to make sure you are on the main branch
+-   **Ensure sure you are on the main branch**\
+    git branch\
+    **(if not)**\
+    git switch main
 
--   (if not) use git switch branch
+-   **Merge the testbranch into main**\
+    git merge testbranch
 
--   git merge testbranch
+-   **If the conflict appears, fix the conflict by choose the preferred version and remove**\
+    \<\<\<\<\<\<\<\
+    =======\
+    \>\>\>\>\>\>\>
 
--   fix the conflict by choose the preferred version and delete (\<\<\<\<\<\<\<, =======, \>\>\>\>\>\>\>)
+-   **Stage and commit the resolved conflict**\
+    git add .\
+    git commit -m "conflict resolved"
 
--   git add .
-
--   git commit -m "conflict resolved"
-
--   git push origin main
+-   **Push the updated to main branch**\
+    git push origin main
 
 7\. Tag this commit v1.0 on main using an annotated tag.
 
--   git tag -a v1.0
+-   **Create an annotated tag**\
+    git tag -a v1.0
 
--   add the tag massage "Version 1.0 - merged testbranch and resolved conflict"
+-   **Add the tag massage**\
+    "Version 1.0 - merged testbranch and resolved conflict"
 
--   git push origin v1.0
+-   **Push the tag to remote**\
+    git push origin v1.0
 
 8\. Delete branch testbranch locally and on the remote.
 
--   git switch main
+-   **Ensure you are on main branch** - branch cannot be deleted if you are in the branch that wish to be delete\
+    git switch main
 
--   git branch -d testbranch
+-   **Delete the branch locally**\
+    git branch -d testbranch
 
--   git push origin —delete testbranch
+-   **Delete the branch from the remote**\
+    git push origin –-delete testbranch
 
-9\. Show the commit log in condensed form in the terminal.
+9\. **Show the commit log in condensed form in the terminal**.
 
--   git log —oneline
+-   git log –-oneline
+-   ![](images/log.png)
 
 10\. On main, create a new section in example.qmd that includes an easy to make plot. Commit the changes, and demonstrate using the command line interface how to undo the commit *without* losing your local changes.
 
-#### Simple Plot
+#### Basic Plot
 
 ```{r}
 plot(cars)
 ```
 
--   create a new simple plot
+-   **Create a new simple plot**
 
--   git add .
+-   **Save the file and stage all changes**\
+    git add .
 
--   git commit -m "modified example.qmd for step 10"
+-   **Commit the change**\
+    git commit -m "modified example.qmd on step 10"
 
--   git reset --soft HEAD\~1
+-   **Undo the commit, while keeping the changes on the file**\
+    git reset --soft HEAD\~1
